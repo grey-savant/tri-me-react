@@ -1,38 +1,278 @@
-.App {
+/* Imports */
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+/* Variables */
+:root {
+  --black: #190b12;
+  --lt-grey: #dee1e0;
+  --dk-grey: #999;
+  --blue: #0066ff;
+  --bg-warning: #ffffcc;
+  --text-warning: #ff6600;
+  --border-warning: #ff9966;
+  --bg-error: #ff9999;
+  --text-error: #cc3300;
+  --border-error: #cc3300;
+  --bg-success: #ccffff;
+  --border-success: #00cc66;
+}
+
+/* Blank the canvas - component reset */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* Universal styles */
+* {
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  color: var(--black);
+}
+
+.text-light {
+  color: var(--lt-grey);
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+
+.bg-light {
+  background-color: var var(--lt-grey);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  padding: 12px;
+}
+
+/* Nav bar */
+nav {
+  display: block;
+  background-color: var(--black);
+  color: #fff;
+  padding: 12px;
+  position: sticky;
+  top: 0;
+  overflow: auto;
+}
+
+nav ul {
+  display: block;
+  float: right;
+  margin: 18px 0px;
+}
+
+nav li {
+  display: inline-block;
+  margin: auto 0px;
+}
+
+nav .logo {
+  display: block;
+  float: left;
+}
+
+nav h1 {
+  float: left;
+  padding: 1em;
+  color: var(--lt-grey);
+}
+
+nav a {
+  font-size: 1em;
+  color: var(--lt-grey);
+  text-decoration: none;
+  padding: 0 12px;
+}
+
+nav i {
+  font-size: 1em;
+  color: var(--lt-grey);
+}
+
+nav .logo {
+  height: 50px;
+  width: 50px;
+}
+
+/* Hero section */
+
+.hero {
+  height: 240px;
+  background: var(--lt-grey);
+}
+
+/* Section General Styles */
+
+section {
+  /* height: 72px;*/
+  border-bottom: 1px solid var(--lt-grey);
+}
+
+.section-header {
+  text-align: center;
+  font-size: 2em;
+  font-weight: normal;
+  padding: 1em 0;
+}
+
+.section-copy {
+  padding: 1em;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Footer Styles */
+footer {
+  background: var(--black);
+  background-color: #190b12;
+  padding: 1em;
+  display: block;
+  overflow: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+footer ul {
+  display: block;
+  float: right;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+footer a {
+  font-size: 0.75em;
+  color: var(--lt-grey);
+  text-decoration: none;
+  padding: 0px 6px;
+}
+
+footer i {
+  color: var(--lt-grey);
+}
+
+footer li {
+  display: inline-block;
+}
+
+footer .copyright .date {
+  color: var(--lt-grey);
+  font-size: 1.3em;
+}
+
+footer .copyright {
+  float: left;
+  color: var(--lt-grey);
+  font-size: 0.75em;
+}
+
+/* Panel Styles */
+.panel {
+  width: 80%;
+  text-align: center;
+  padding: 2em;
+  border: 1px solid var(--lt-grey);
+  border-radius: 1em;
+  overflow: auto;
+  background-color: var(--lt-grey);
+  margin: 2em auto auto auto;
+}
+
+.panel h1 {
+  font-size: 2em;
+  padding-bottom: 1em;
+}
+
+/* Card Styles */
+.section-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1em;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  width: 250px;
+  text-align: center;
+  padding: 2em;
+  border: 1px solid var(--lt-grey);
+  border-radius: 1em;
+  overflow: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-img {
+  height: 135px;
+  width: 135px;
+}
+
+.card-header {
+  padding: 0.75em;
+}
+
+.card-copy {
+  padding: 0.75em;
+}
+
+/* Form element styles */
+form input[type="text"] {
+  color: var(--dk-grey);
+  padding: 0.25em;
+  border: 1px solid var(--dk-grey);
+  border-radius: 10px;
+}
+
+.btn {
+  padding: 0.8em;
+  border: 1px solid var(--dk-grey);
+  border-radius: 12px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.btn-blue {
+  background-color: var(--blue);
+  color: var(--lt-grey);
+}
+
+/* Alert Styles */
+.alert {
+  width: 80%;
+  padding: 1em;
+  margin: 1em auto auto auto;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.alert-warning {
+  background-color: var(--bg-warning);
+  color: var(--text-warning);
+  border: 1px solid var(--border-warning);
+}
+
+.alert-error {
+  background-color: var(--bg-error);
+  color: var(--text-error);
+  border: 1px solid var(--border-error);
+}
+
+.alert-success {
+  background-color: var(--bg-success);
+  border: 1px solid var(--border-success);
+}
+
+.about h1 {
+  font-size: 2em;
+  padding: 1em 0px;
+}
+
+.about p {
+  padding: 1em 0px;
 }
